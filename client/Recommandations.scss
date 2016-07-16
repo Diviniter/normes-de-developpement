@@ -1,15 +1,14 @@
 @import "{meta:susy}/susy";
 
-$warningSize:25px;
-
-.recommandation-title{
+.recommandation-title {
   font-size:1.2em;
   margin-top:15px;
 }
 
+$warningSize:25px;
 $paddingSize: 5px;
 
-li[class*="-recommandation"]{
+li[class*="-recommandation"] {
   margin-bottom: 15px;
   padding: $paddingSize;
   border-width:1px;
@@ -26,44 +25,29 @@ li[class*="-recommandation"]{
   }
 }
 
+@mixin defineColor($color) {
+  border-color: $color;
+  svg {
+    stroke:$color;
+    fill:$color;
+  }
+  .description_complement, .recommandation {
+    border-color: $color;
+  }
+}
+
 $opacity : 1;
-$green : rgba(0, 128, 0, $opacity);
 
 .weak-recommandation {
-  border-color:$green;
-  svg {
-    stroke:$green;
-    fill:$green;
-  }
-  .description_complement {
-    border-color: $green;
-  }
+  @include defineColor(rgba(0, 128, 0, $opacity));
 }
-
-$orange : rgba(255, 165, 0, $opacity);
 
 .intermediate-recommandation {
-  border-color: $orange;
-  svg {
-    stroke:$orange;
-    fill:$orange;
-  }
-  .description_complement {
-    border-color: $orange;
-  }
+  @include defineColor(rgba(255, 165, 0, $opacity));
 }
 
-$red : rgba(255, 0, 0, $opacity);
-
 .strong-recommandation {
-  border-color: $red;
-  svg {
-    stroke:$red;
-    fill:$red;
-  }
-  .description_complement {
-    border-color: $red;
-  }
+  @include defineColor(rgba(255, 0, 0, $opacity));
 }
 
 .description_complement {
@@ -72,4 +56,16 @@ $red : rgba(255, 0, 0, $opacity);
   margin-left: 20px;
   padding-left:5px;
   border-left: 3px solid;
+}
+
+.recommandation {
+  margin-bottom:5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid;
+}
+
+.recommandation:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
 }
