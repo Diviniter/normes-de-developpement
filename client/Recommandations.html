@@ -1,0 +1,10 @@
+<template name="Recommandations">
+  <h1 class="title-big">Standards de développement</h1>
+  <h2 class="recommandation-title">Recommandations</h2>
+  {{> NewRecommandation}}
+  <ul class="recommandations-list">
+    {{> RecommandationsBlock level='weak'}}
+    {{> RecommandationsBlock level='intermediate'}}
+    {{> RecommandationsBlock level='strong'}}
+  </ul>
+</template>
