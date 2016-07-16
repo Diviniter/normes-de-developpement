@@ -1,5 +1,14 @@
 @import "{meta:susy}/susy";
 
+@mixin no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .recommandation-title {
   font-size:1.2em;
   margin-top:15px;
@@ -22,6 +31,7 @@ li[class*="-recommandation"] {
     top:-(($warningSize/2)+$paddingSize);
     right:-(($warningSize/2)+$paddingSize);
     background-color: white;
+    @include no-select;
   }
 }
 
