@@ -15,21 +15,20 @@
 }
 
 $warningSize:25px;
-$paddingSize: 5px;
 
 li[class*="-recommandation"] {
   margin-bottom: 15px;
-  padding: $paddingSize;
+  padding: 5px;
   border-width:1px;
   border-style: solid;
-  width:98%;
+  width:100%;
+  position: relative;
   svg {
     width:$warningSize;
     height:$warningSize;
-    float: right;
-    position:relative;
-    top:-(($warningSize/2)+$paddingSize);
-    right:-(($warningSize/2)+$paddingSize);
+    position:absolute;
+    top:-($warningSize/2);
+    right:-($warningSize/2);
     background-color: white;
     @include no-select;
   }
