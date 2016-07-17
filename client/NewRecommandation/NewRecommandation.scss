@@ -8,35 +8,10 @@ $susy:(
   gutter-position: inside
 );
 
-#insertRecommandationsForm {
-  margin-top: 10px;
-  margin-bottom: 15px;
-  height:60px;
-  label {
-    display: block;
-  }
-  &>:nth-child(1) {
-    @include span(3 of 24);
-    &>select{
-      width:100%;
-    }
-  }
-  &>:nth-child(2) {
-    @include span(16 of 24);
-    [name='description'] {
-      vertical-align: top;
-      resize: none;
-      width:99%;
-    }
-  }
-  &>:nth-child(3) {
-    @include span(5 of 24);
-    position: relative;
-    height:100%;
-    button{
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-  }
+.hidden {
+  display:none;
+}
+
+#insertRecommandationForm {
+  border:solid 1px black;
 }
