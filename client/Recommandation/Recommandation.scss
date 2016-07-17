@@ -1,0 +1,19 @@
+.description_complement {
+  font-style: italic;
+  font-size: 0.9em;
+  margin-left: 20px;
+  padding-left:5px;
+  border-left: 3px solid;
+}
+
+.recommandation {
+  margin-bottom:5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid;
+
+  &:last-child{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+}
