@@ -17,7 +17,10 @@ $susy:(
   }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 599px){
+  body {
+    @include container(100%);
+  }
   .form {
     width:100%;
   }
@@ -39,7 +42,7 @@ $susy:(
   background-color: grey;
   opacity:0.5;
   z-index: 1000;
-  position:fixed;
+  position:absolute;
   top:0;
   left:0;
   width:100%;
@@ -48,11 +51,13 @@ $susy:(
 
 $iconWidth:20px;
 
-.closeForm {
+.icon-close {
   position:absolute;
   top:-($iconWidth/2);
   right:-($iconWidth/2);
   width:$iconWidth;
   height: $iconWidth;
   cursor: pointer;
+  background-image: url('/close.svg');
+  background-size: $iconWidth;
 }

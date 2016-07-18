@@ -1,9 +1,10 @@
 <template name="NewRecommandation">
   {{#autoForm collection="Recommandations" id="insertRecommandationForm" class="hidden form" type="insert"}}
-    <i class="closeForm">X</i>
+    <i class="icon-close"></i>
     {{> afQuickField name='level' firstOption=false options=levelOptions}}
     {{> afQuickField name='description' rows=2 }}
     {{> afQuickField name='description_complement' rows=2 }}
+    {{> afQuickField name='keyword' }}
     <div>
       <button type="submit" class="btn btn-primary">Ajouter</button>
     </div>

@@ -15,7 +15,7 @@
   margin-bottom:10px;
 }
 
-.new-recommandation {  
+.new-recommandation {
   margin-bottom:10px;
 }
 
@@ -26,8 +26,8 @@ li[class*="-recommandation"] {
   padding: 5px;
   border-width:1px;
   border-style: solid;
-  width:100%;
   position: relative;
+  margin-right:$warningSize/2;
   svg {
     width:$warningSize;
     height:$warningSize;

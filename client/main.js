@@ -9,8 +9,7 @@ closeForm = function () {
 }
 
 Template.body.events({
-  'mousedown .closeForm' : function(event) {
-    event.stopImmediatePropagation();
+  'click .icon-close' : function(event) {
     closeForm();
   }
 });
